@@ -6,7 +6,7 @@ client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 st.title("Audio Transcription & Analysis Tool")
 st.write("Upload an audio file to extract text, summarize, and get key points.")
 
-audio_file = st.file_uploader("Upload Audio (MP3, WAV, M4A)", type=["mp3", "wav", "m4a"])
+audio_file = st.file_uploader("Upload Audio File", type=["mp3", "wav", "m4a", "mp4", "mpeg", "webm", "ogg", "flac"])
 
 if audio_file is not None:
     st.audio(audio_file)
